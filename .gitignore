@@ -1,0 +1,29 @@
+# Ignore top-level docs, scratch files, & internal tools
+/*.md
+!/README.md
+/*.html
+/*.json
+/*.png
+.kilocode/
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables & secrets
+.env
+**/.env
+ADMIN_CREDENTIALS.md
+
+# Build outputs
+dist/
+**/dist/
+
+# Logs & temp files
+*.log
+.DS_Store
+.vscode/
+
+# Backend uploads
+backend/storage/*
+!backend/storage/.gitkeep
