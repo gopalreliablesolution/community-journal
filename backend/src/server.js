@@ -19,6 +19,7 @@ import searchRoutes from "./routes/search.js";
 import profileRoutes from "./routes/profile.js";
 import adminRoutes from "./routes/admin.js";
 import newsletterRoutes from "./routes/newsletter.js";
+import notificationRoutes from "./routes/notifications.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -82,6 +83,7 @@ app.use("/api/v1/search", searchRoutes);
 app.use("/api/v1", profileRoutes);
 app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/newsletter", newsletterRoutes);
+app.use("/api/v1", notificationRoutes);
 
 app.get("/api/v1/health", (req, res) => {
   res.json({ success: true, data: { status: "ok", timestamp: new Date().toISOString(), uptime: process.uptime() } });
